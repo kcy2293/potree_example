@@ -1,0 +1,43 @@
+############################## [ COMMAND ] ##############################
+
+PotreeConverter /home/kcynote/dev/resource/phantom_20151223.las -o /home/kcynote/dev/resource/phantom_20151223 -l 8
+
+############################## [ RESULT ] ##############################
+== params ==
+source[0]:         	/home/kcynote/dev/resource/phantom_20151223.las
+outdir:            	/home/kcynote/dev/resource/phantom_20151223
+spacing:           	0
+diagonal-fraction: 	250
+levels:            	21
+format:            	
+scale:             	0
+pageName:          	
+output-format:     	BINARY
+
+AABB: 
+min: [293,915, 4.13929e+06, 3.141]
+max: [294,441, 4.1398e+06, 27.316]
+size: [526.149, 510.518, 24.175]
+
+cubic AABB: 
+min: [293,915, 4.13929e+06, 3.141]
+max: [294,441, 4.13982e+06, 529.29]
+size: [526.149, 526.149, 526.149]
+
+spacing calculated from diagonal: 3.64527
+READING:  /home/kcynote/dev/resource/phantom_20151223.las
+INDEXING: 1,000,000 points processed; 1,000,000 points written; 1.03 seconds passed
+INDEXING: 2,000,000 points processed; 2,000,000 points written; 2.53 seconds passed
+INDEXING: 3,000,000 points processed; 3,000,000 points written; 4.35 seconds passed
+INDEXING: 4,000,000 points processed; 4,000,000 points written; 7.17 seconds passed
+INDEXING: 5,000,000 points processed; 5,000,000 points written; 10.348 seconds passed
+INDEXING: 6,000,000 points processed; 6,000,000 points written; 12.591 seconds passed
+...
+
+INDEXING: 391,000,000 points processed; 391,000,000 points written; 1,436.95 seconds passed
+closing writer
+
+conversion finished
+391,583,324 points were processed and 391,583,324 points ( 100% ) were written to the output. 
+duration: 1,440.56s (24분)
+

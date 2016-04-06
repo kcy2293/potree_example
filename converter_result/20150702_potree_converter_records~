@@ -1,0 +1,62 @@
+time ./PotreeConverter ~/dev/resource/WGS84-UTM52/*.txt -f xyz -o /home/kcynote/potree/resources/converted/dmes_250_l3
+
+630,177,830 points were processed and 179 points ( 2.84047e-05% ) were written to the output. 
+duration: 1,284.85s (21.4m)
+
+real	110m20.087s
+user	105m42.663s
+sys	0m40.082s
+
+spacing calculated from diagonal: 80.0929
+Last level will have spacing:     20.0232
+
+AABB: 
+               4,165,170.111  
+min: [263,690, 4.16517e+06, -5.65]
+max: [271,270, 4.1837e+06, 50.841]
+size: [7,580.43, 18,532.8, 56.491]
+
+cubic AABB: 
+min: [263,690, 4.16517e+06, -5.65]
+max: [282,222, 4.1837e+06, 18,527.1]
+size: [18,532.8, 18,532.8, 18,532.8]
+
+================================================================================================
+time ./PotreeConverter ~/dev/resource/WGS84-UTM52/*.txt -f xyz -o /home/kcynote/potree/resources/converted/dmes_2500_l5 -d 2500 -l 5
+
+
+spacing calculated from diagonal: 8.00929
+Last level will have spacing:     0.50058
+
+AABB: 
+min: [263,690, 4.16517e+06, -5.65]
+max: [271,270, 4.1837e+06, 50.841]
+size: [7,580.43, 18,532.8, 56.491]
+
+cubic AABB: 
+min: [263,690, 4.16517e+06, -5.65]
+max: [282,222, 4.1837e+06, 18,527.1]
+size: [18,532.8, 18,532.8, 18,532.8]
+
+
+
+================================================================================================
+
+time ./PotreeConverter ~/dev/resource/beach_flower/*.las -o /home/kcynote/potree/resources/converted/test -d 250
+
+spacing calculated from diagonal: 3.95285
+Last level will have spacing:     0.988212
+
+AABB: 
+min: [139,878, 433,614, 1.2275]
+max: [140,564, 434,324, 36.31]
+size: [686.13, 710.323, 35.0825]
+
+cubic AABB: 
+min: [139,878, 433,614, 1.2275]
+max: [140,588, 434,324, 711.55]
+size: [710.323, 710.323, 710.323]
+
+
+================================================================================================
+PotreeConverter ~/dev/resource/beach_flower/*.las -o /home/kcynote/potree/resources/converted/beach_flower_l8s3 -l 8 -s 3

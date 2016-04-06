@@ -1,0 +1,67 @@
+kcynote@kcynote:~/dev/60_ust21/potree/PotreeConverter$ ./PotreeConverter ./final_간월암\ 3cm\ 최종.las -o /home/kcynote/potree/resources/converted/final_ganwol -l 10 
+== params ==
+source[0]:         	./final_간월암 3cm 최종.las
+outdir:            	/home/kcynote/potree/resources/converted/final_ganwol
+spacing:           	0
+diagonal-fraction: 	250
+levels:            	10
+format:            	
+scale:             	0
+output-format:     	BINARY
+
+
+spacing calculated from diagonal: 2.23621
+Last level will have spacing:     0.00436759
+
+AABB: 
+min: [147,037, 445,058, 0.515]
+max: [147,517, 445,343, 30.99]
+size: [479.895, 285.15, 30.475]
+
+cubic AABB: 
+min: [147,037, 445,058, 0.515]
+max: [147,517, 445,538, 480.41]
+size: [479.895, 479.895, 479.895]
+
+reading ./final_간월암 3cm 최종.las
+INDEXING: 1,000,000 points processed; 1,000,000 points written; 30.584 seconds passed
+INDEXING: 2,000,000 points processed; 2,000,000 points written; 63.978 seconds passed
+INDEXING: 3,000,000 points processed; 3,000,000 points written; 98.196 seconds passed
+INDEXING: 4,000,000 points processed; 4,000,000 points written; 133.402 seconds passed
+INDEXING: 5,000,000 points processed; 5,000,000 points written; 172.005 seconds passed
+INDEXING: 6,000,000 points processed; 6,000,000 points written; 208.24 seconds passed
+INDEXING: 7,000,000 points processed; 7,000,000 points written; 243.686 seconds passed
+INDEXING: 8,000,000 points processed; 8,000,000 points written; 285.376 seconds passed
+INDEXING: 9,000,000 points processed; 9,000,000 points written; 324.799 seconds passed
+INDEXING: 10,000,000 points processed; 10,000,000 points written; 367.724 seconds passed
+INDEXING: 11,000,000 points processed; 11,000,000 points written; 418.579 seconds passed
+INDEXING: 12,000,000 points processed; 12,000,000 points written; 493.235 seconds passed
+INDEXING: 13,000,000 points processed; 13,000,000 points written; 548.508 seconds passed
+INDEXING: 14,000,000 points processed; 14,000,000 points written; 597.747 seconds passed
+INDEXING: 15,000,000 points processed; 15,000,000 points written; 647.678 seconds passed
+INDEXING: 16,000,000 points processed; 16,000,000 points written; 693.147 seconds passed
+INDEXING: 17,000,000 points processed; 17,000,000 points written; 732.894 seconds passed
+INDEXING: 18,000,000 points processed; 18,000,000 points written; 785.094 seconds passed
+INDEXING: 19,000,000 points processed; 19,000,000 points written; 827.254 seconds passed
+INDEXING: 20,000,000 points processed; 20,000,000 points written; 873.089 seconds passed
+INDEXING: 21,000,000 points processed; 21,000,000 points written; 913.052 seconds passed
+INDEXING: 22,000,000 points processed; 22,000,000 points written; 958.793 seconds passed
+INDEXING: 23,000,000 points processed; 23,000,000 points written; 999.15 seconds passed
+INDEXING: 24,000,000 points processed; 24,000,000 points written; 1,060.73 seconds passed
+INDEXING: 25,000,000 points processed; 25,000,000 points written; 1,122.32 seconds passed
+INDEXING: 26,000,000 points processed; 26,000,000 points written; 1,166.45 seconds passed
+INDEXING: 27,000,000 points processed; 27,000,000 points written; 1,204.48 seconds passed
+INDEXING: 28,000,000 points processed; 28,000,000 points written; 1,250.21 seconds passed
+INDEXING: 29,000,000 points processed; 29,000,000 points written; 1,292.72 seconds passed
+INDEXING: 30,000,000 points processed; 30,000,000 points written; 1,333.12 seconds passed
+INDEXING: 31,000,000 points processed; 31,000,000 points written; 1,375.47 seconds passed
+INDEXING: 32,000,000 points processed; 32,000,000 points written; 1,417.3 seconds passed
+INDEXING: 33,000,000 points processed; 33,000,000 points written; 1,460.18 seconds passed
+INDEXING: 34,000,000 points processed; 34,000,000 points written; 1,504.23 seconds passed
+INDEXING: 35,000,000 points processed; 35,000,000 points written; 1,552.69 seconds passed
+closing writer
+
+conversion finished
+35,846,030 points were processed and 35,846,030 points ( 100% ) were written to the output. 
+duration: 1,592.7s
+
