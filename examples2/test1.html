@@ -1,0 +1,100 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Viewer</title>
+	<link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+	<div id="renderArea"></div>
+	<script src="../libs/three.js/build/three.js"></script>
+	<script src="../libs/other/OrbitControls.js"></script>
+	<script src="../build/js/potree.js"></script>
+	<script>
+		var el = document.getElementById('renderArea');
+		var pointcloudPath = "../resources/pointclouds/lion_takanawa/cloud.js";
+
+		var scene, camera, controls, renderer;
+		var pointcloud;
+		var clock = new THREE.Clock();
+
+		function init() {
+			var fov = 75;
+			var width = el.clientWidth;
+			var height= el.clientHeight;
+			var aspect = width / height;
+			var near = 0.1;
+			var far = 1000000;
+			var referenceFrame = new THREE.Object3D();
+
+			// camera
+			camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+			camera.position.set(5, 5, 5);
+			camera.lookAt(new THREE.Vector3(0, 0, 0));
+			camera.rotation.order = 'ZYX';
+
+			// scene
+			scene = new THREE.Scene();
+			scene.add(new THREE.AxisHelper(5));
+			scene.add(referenceFrame);
+
+			// renderer
+			renderer = new THREE.WebGLRenderer();
+			renderer.setSize(width, height);
+			el.appendChild(renderer.domElement);
+
+			// controls
+			controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+			// load pointcloud
+			POCLoader.load(pointcloudPath, function(geometry) {
+				pointcloud = new Potree.PointCloudOctree(geometry);
+				pointcloud.material.pointSizeType = Potree.PointSizeType.ADAPTIVE;
+				pointcloud.material.size = 1;
+
+				referenceFrame.add(pointcloud);
+
+				referenceFrame.updateMatrixWorld(true);
+				var sg = pointcloud.boundingSphere.clone().applyMatrix4(pointcloud.matrixWorld);
+				referenceFrame.position.copy(sg.center).multiplyScalar(-1);
+				referenceFrame.updateMatrixWorld(true);
+				referenceFrame.applyMatrix(new THREE.Matrix4().set(
+					1,0,0,0,
+					0,0,1,0,
+					0,-1,0,0,
+					0,0,0,1
+				));
+			});
+		}
+
+		function update() {
+			if(pointcloud){
+				pointcloud.update(camera, renderer);
+			}
+			
+			controls.update(clock.getDelta());
+		}
+
+		function render() {
+			var width = el.clientWidth;
+			var height= el.clientHeight;
+			var aspect = width / height;
+
+			camera.aspect = aspect;
+			camera.updateProjectionMatrix();
+
+			renderer.setSize(width, height);
+			renderer.render(scene, camera);
+			renderer.clearDepth();
+		}
+
+		function loop() {
+			requestAnimationFrame(loop);
+			update();
+			render();
+		}
+
+		init();
+		loop();
+	</script>
+</body>
+</html>
